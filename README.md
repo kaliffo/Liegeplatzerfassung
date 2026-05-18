@@ -1,38 +1,58 @@
-# Liegeplatzerfassung
+# PythonProjectQt3 – Voice Form
 
-Eine Python-Anwendung zur Erfassung und Verwaltung von Liegeplätzen, entwickelt mit PyQt.
+A PyQt6 desktop application that converts text to speech using Google Text-to-Speech (gTTS).
 
-## Beschreibung
+## Features
 
-Dieses Projekt ermöglicht die strukturierte Erfassung und Verwaltung von Liegeplätzen über eine grafische Benutzeroberfläche (GUI), die mit Qt Designer erstellt wurde.
+- Enter any text in a text field
+- Choose between **German** and **English** voice output
+- Plays the generated speech audio immediately
+- Close button to exit the application
 
-## Projektstruktur
+## Project Structure
 
 ```
-Liegeplatzerfassung/
-├── Liegeplatzdaten.py   # Hauptanwendung / Logik
-├── Liegeplatzdaten.ui   # Qt Designer UI-Datei
-├── BSP_Form.py          # Beispielformular / Hilfsklasse
-└── images.jpg           # Bildressource
+PythonProjectQt3/
+├── Formular/
+│   ├── BSP_Form.py
+│   ├── images.jpg
+│   ├── Liegeplatzdaten.py
+│   └── Liegeplatzdaten.ui
+├── Voice_Form/
+│   ├── frm_voice.py       # Main logic (TTS, button handlers)
+│   ├── frm_voice.ui       # Qt Designer UI file
+│   └── MainForm.py        # Application entry point
+├── .gitignore
+└── README.md
 ```
 
-## Voraussetzungen
+## Requirements
 
 - Python 3.x
-- PyQt5 oder PyQt6
+- PyQt6
+- gTTS
+- pygame
 
-Installation der Abhängigkeiten:
-
-```bash
-pip install PyQt5
-```
-
-## Verwendung
+## Installation
 
 ```bash
-python Liegeplatzdaten.py
+pip install PyQt6 gTTS pygame
 ```
 
-## Lizenz
+## Usage
 
-Dieses Projekt ist für den privaten/schulischen Gebrauch bestimmt.
+Run the application with:
+
+```bash
+python Voice_Form/MainForm.py
+```
+
+1. Type or paste text into the text field
+2. Select the desired language (German is default, check **English** for English)
+3. Click **Read** – the text will be spoken aloud
+4. Click **Close** to exit
+
+## Notes
+
+- Requires an active internet connection (gTTS uses Google's API)
+- Audio is saved temporarily as `output.mp3` and deleted after playback

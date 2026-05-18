@@ -28,6 +28,7 @@ env/
 # Qt / PyQt
 *.qmlc
 *.jsc
+frm_voice.py
 
 # Betriebssystem
 .DS_Store
@@ -41,3 +42,7 @@ desktop.ini
 *.db
 *.sqlite
 *.sqlite3
+
+# Audio temp files
+output.mp3
+*.mp3
