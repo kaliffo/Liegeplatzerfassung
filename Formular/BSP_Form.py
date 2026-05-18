@@ -17,7 +17,7 @@ class MainForm(QtWidgets.QWidget, Ui_frmLiegeplatzerfassung):
 
     def btnClose_click(self):
         print("Closed")
-        sys.exit()
+        app.quit()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
